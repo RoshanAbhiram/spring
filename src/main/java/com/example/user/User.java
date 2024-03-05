@@ -5,7 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="mytable2")
+@Table(name="mytable")
+
 public class User {
 	
 	@Id
@@ -19,7 +20,6 @@ public class User {
 	public User() {
 		
 	}
-	
 	
 	public User(String username, String firstname, String lastname, int age, String password) {
 		super();
