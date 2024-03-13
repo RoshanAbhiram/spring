@@ -3,9 +3,17 @@ package com.example.user;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name="mytable")
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
 
 public class User {
 	
@@ -18,8 +26,10 @@ public class User {
 	private String password;
 	
 	public User() {
-		
 	}
+	
+		
+	
 	
 	public User(String username, String firstname, String lastname, int age, String password) {
 		super();
@@ -72,5 +82,5 @@ public class User {
 	}
 	
 	
-
 }
+

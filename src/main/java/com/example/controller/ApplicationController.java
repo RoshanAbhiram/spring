@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,6 +40,7 @@ public class ApplicationController {
 		return "welcomepage";
 	}
 	@GetMapping("/show-users")
+	//@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public String showallusers(HttpServletRequest request) {
 		request.setAttribute("users", userservice.showallusers());
 		request.setAttribute("mode", "ALL_USERS");
